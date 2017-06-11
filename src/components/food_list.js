@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import FoodProperties from './food_props';
 
-class FoodList extends React.Component{
-  constructor(props){
+class FoodList extends React.Component {
+  constructor(props) {
     super(props);
-    //exporting the array of object from another file and importing it into this file
-    this.state={
+    // export this array of object from another file.
+    // and then import it into this file
+    this.state = {
       food: [
         {
           key: 0,
@@ -14,27 +15,26 @@ class FoodList extends React.Component{
         },
         {
           key: 1,
-          food: 'Onion Pie',
-          ingredients: 'Onion,Pie Crust,Sounds Yummy right?'
+          food: 'Spaghetti',
+          ingredients: 'Noodles,Tomato Sauce,(Optional) Meatballs'
         },
         {
           key: 2,
-          food: 'Spaghetti',
-          ingredients: 'Noodles,Tomato Sauce,(Optional) Meatballs'
+          food: 'Onion Pie',
+          ingredients: 'Onion,Pie Crust,Sounds Yummy right?'
         }
       ],
-
-      countFood: function(){
-        return this.data.length;
+      countFood: function() {
+        return this.data.length
       }
+    }
+  };
 
-    };
-  }
   render() {
-    return(
+    return (
       <div>
         <div className="someDiv">
-          <FoodProperties food = {this.state.food} />
+          <FoodProperties food={this.state.food}/>
         </div>
       </div>
     );

@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Provider } from 'react-redux';
-// import { createStore, applyMiddleware } from 'redux';
 
 import FoodList from './components/food_list';
-// import reducers from './reducers';
-
-//const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 const App = () => {
-  return(
+  return (
     <div>
-      <div className="recipeTitle">List of Recipes</div>
+      {/* Why not a header tag? */}
+      <div className="recipeTitle">Recipe List!</div>
       <FoodList />
     </div>
-  )
+  );
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+
+ReactDOM.render(<App /> , document.querySelector('.container'));

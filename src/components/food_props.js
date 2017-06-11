@@ -1,4 +1,6 @@
 import React from 'react';
+import Modal from './show_modal';
+
 
 const FoodProperties = (props) => {
   console.log(props);
@@ -6,7 +8,7 @@ const FoodProperties = (props) => {
     console.log('food item', item);
     return(
       <li key={index} className="list-group -item">
-
+        <Modal item={item} />
       </li>
     );
   });

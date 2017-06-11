@@ -4,6 +4,7 @@ import FoodProperties from './food_props';
 class FoodList extends React.Component{
   constructor(props){
     super(props);
+    //exporting the array of object from another file and importing it into this file
     this.state={
       food: [
         {
@@ -23,6 +24,9 @@ class FoodList extends React.Component{
         }
       ],
 
+      countFood: function(){
+        return this.data.length;
+      }
 
     };
   }
